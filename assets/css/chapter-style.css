@@ -1,0 +1,359 @@
+body {
+    background: linear-gradient(to top, #FF6B6B, #FFCC70);
+    color: #2C3E50;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.chapter-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+}
+
+.chapter-container:first-of-type {
+    display: flex;
+}
+
+.title-container {
+    padding-left: 20px;
+    width: 100%;
+    height: 30%;
+}
+
+
+.title-chapter {
+    font-size: 5rem;
+    text-align: left;
+    font-family: 'Marcellus', serif;
+    animation: fadeIn 2s ease-in-out forwards;
+
+}
+
+.desc-chapter {
+    margin-top: 20px;
+    font-size: 2rem;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    opacity: 0;
+}
+
+.title-chapter+.desc-chapter {
+    animation: slideInBottom 3s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.desc-chapter+.desc-chapter {
+    animation: slideInBottom 2s ease-in-out forwards;
+    animation-delay: 4s;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
+
+.next-btn {
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px 40px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 20px;
+    opacity: 0;
+
+}
+
+.next-btn.yes {
+    background-color: #4CAF50;
+    animation: slideInLeft 1s ease-in-out forwards;
+    animation-delay: 6s;
+    transition: padding 0.2s ease-in-out;
+}
+
+.next-btn.yes:hover {
+    padding: 12px 44px;
+}
+
+
+.next-btn.no {
+    background-color: #D43F3A;
+    animation: slideInRight 1s ease-in-out forwards;
+    transition: background-color 0.4s ease-in-out, padding 0.2s ease-in-out;
+    animation-delay: 6s;
+}
+
+.next-btn.no:hover {
+    background-color: #4CAF50;
+
+    padding: 12px 44px;
+}
+
+/* Zmiana tekstu za pomocą pseudo-elementu */
+.next-btn.no:hover::before {
+    content: "Tak";
+}
+
+/* Ukrycie oryginalnego tekstu */
+.next-btn.no::before {
+    content: "Nie";
+}
+
+
+.swipe-card {
+    width: 420px;
+    height: 600px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease-out;
+    touch-action: none;
+}
+
+.profile-image {
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    border: 10px solid white;
+    border-radius: 20px
+        /* Zaokrąglenie tylko górnych rogów */
+}
+
+.profile-info {
+    padding: 15px;
+    text-align: center;
+    color: black;
+}
+
+.profile-name {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.profile-bio {
+    font-size: 1.8rem;
+    margin-top: 5px;
+    color: #666;
+}
+
+.swipe-actions {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.like-btn,
+.dislike-btn {
+    font-size: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    padding: 0 10px;
+}
+
+.like-btn:hover {
+    transform: scale(1.2);
+    color: red;
+}
+
+.dislike-btn:hover {
+    transform: scale(1.2);
+    color: #ff4444;
+}
+
+
+
+.title-slide3 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.desc-slide3 {
+    align-self: center;
+    text-align: left;
+    font-size: 2rem;
+    opacity: 0;
+    animation: slideInBottom 3s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.next-slide {
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px 40px;
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    opacity: 0;
+    animation: slideInBottom 2s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+.next-slide:hover {
+    background-color: #34495E;
+}
+
+
+.title-slide4 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2C3E50;
+    /* Elegancki granatowy */
+}
+
+/* Stylizacja linii czasu */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background: white;
+    padding: 15px 25px;
+    margin: 15px 0;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+    background-color: #FFCC70;
+}
+
+.date {
+    font-weight: bold;
+    color: #FF6B6B;
+    /* Ciepła czerwień */
+    font-size: 2rem;
+}
+
+.event {
+    margin-top: 5px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* ======== Popup (Modal) ======== */
+.popup {
+    display: none;
+    /* Domyślnie ukryty */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Przyciemnione tło */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    position: relative;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    font-size: 1.8rem;
+    color: #2C3E50;
+}
+
+/* Przycisk zamykania */
+.close-btn {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #FF6B6B;
+}
+
+.title-slide5 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2C3E50;
+    text-align: center;
+    /* Elegancki granatowy */
+}
+
+.input-field {
+    font-size: 1.8rem;
+    padding: 12px;
+    margin: 15px;
+    width: 300px;
+    border: 2px #34495E solid;
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.input-field:focus {
+    box-shadow: 0 0 15px #34495E;
+    border-color: #34495E;
+    outline: none;
+}
+
+.error-message {
+    display: none;
+    font-size: 1.8rem;
+    color: #a60818;
+    margin-top: 10px;
+}
+
+.submit-button {
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px 40px;
+    background-color: #2C3E50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3S;
+
+}
+
+.submit-button:hover {
+    background-color: #34495E;
+    /* 
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8); */
+}

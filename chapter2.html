@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/chapter-style.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+
+    <title>Rozdział 2</title>
+</head>
+
+<body>
+    <div id="slide1" class="chapter-container">
+        <div class="title-container">
+            <h1 class="title-chapter">Nasza historia</h1>
+            <p class="desc-chapter">Każdy związek to zbiór momentów – tych pełnych radości, śmiechu, wzruszeń, ale i
+                wyzwań, które razem pokonaliśmy. To małe gesty, słowa i spojrzenia, które budowały naszą historię dzień
+                po dniu. Pamiętasz te najważniejsze? Te, które na zawsze pozostaną w naszej pamięci, bez względu na
+                wszystko?</p>
+            <div class="button-container">
+                <button class="next-slide" data-target="slide2">Zobaczmy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="chapter-container" id="slide2">
+        <h1 class="title-slide3">"Niemożliwe nam się dostało..."</h1>
+        <p class="desc-slide3">Są piosenki, które zostają z nami na zawsze – takie, które stają się częścią naszej
+            historii. W słowach tej odnaleźliśmy coś więcej niż tylko melodię – odnaleźliśmy siebie. Chciałbym, aby jej
+            tytuł towarzyszył nam już zawsze, aż do samego końca naszej wspólnej drogi. Bo razem sprawiamy, że wszystko,
+            co wydawało się niemożliwe, staje się możliwe</p>
+
+        <button class="next-slide" data-target="slide3">Możliwe?</button>
+    </div>
+    <div class="chapter-container" id="slide3">
+        <h1 class="title-slide3">Tak wyglądaliśmy przez te 4 lata...</h1>
+        <!-- Karuzela zdjęć -->
+        <div class="carousel">
+            <button class="carousel-btn prev-btn">&#10094;</button>
+            <div class="carousel-wrapper">
+                <div class="carousel-slide active">
+                    <img src="assets/img/photo1.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo2.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo3.JPEG" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo4.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo5.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo6.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo7.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo8.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo9.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo10.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo11.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo12.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo13.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo14.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo15.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo16.jpg" alt="" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="assets/img/photo17.jpg" alt="" class="carousel-image">
+
+                </div>
+                <button class="carousel-btn nxt-btn">&#10095;</button>
+            </div>
+        </div>
+        <button class="next-slide" data-target="slide4">Dalej</button>
+    </div>
+
+    <div class="chapter-container" id="slide4">
+        <h1 class="title-slide3">Nie wszystko się zmienia...</h1>
+        <p class="desc-slide3">Przez te cztery lata wiele się wydarzyło. Inne miejsca, nowe doświadczenia, my –
+            dojrzalsi, inni niż wtedy.Były chwile pełne śmiechu, były wyzwania, których się nie spodziewaliśmy.Ale jedno
+            od tamtej pory pozostało niezmienne.</p>
+
+        <button class="next-slide" data-target="slide5">I już nigdy się nie zmieni</button>
+
+    </div>
+
+    <div class="chapter-container" id="slide5">
+        <h1 class="title-slide3">A co dalej?</h1>
+        <p class="desc-slide3">Byliśmy już w tylu miejscach. Przeżyliśmy tak wiele chwil, które zostaną z nami na
+            zawsze.Wiemy, co się zmieniło. Wiemy, co pozostało niezmienne.Ale teraz najważniejsze pytanie brzmi...</p>
+        <h2 class="desc-slide3">Czy jesteś gotowa na następny rozdział?</h2>
+        <button class="next-slide" onclick="skipToNextChapter('chapter2_end')">Tak</button>
+    </div>
+
+
+
+
+
+    <script src="js/validation.js"></script>
+    <script src="js/chapter-animations.js"></script>
+    <script>
+        window.onload = function () {
+            checkProgress();
+        };
+
+    </script>
+</body>
+
+</html>

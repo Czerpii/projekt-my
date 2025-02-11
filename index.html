@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/start-style.css">
+    <title>Start</title>
+
+</head>
+
+<body>
+    <div class="main-container">
+        Witaj Aleksandro
+    </div>
+    <div class="button-container">
+        <button class="start-button" onclick="showForm()">Rozpocznij</button>
+    </div>
+
+    <div class="form-container">
+        <div class="question-box">
+            <p class="intro">Nie pytam o pierwsze spojrzenie, ani pierwsze słowo, ale o dzień który stał się początkiem
+                wszystkiego.
+            </p>
+            <p class="question">Czy pamiętasz ten dzień?</p>
+        </div>
+        <input type="text" id="answer" class="input-field" placeholder=>
+        <p class="error-message">Niepoprawna odpowiedź. Spróbuj ponownie.</p>
+        <button class="submit-button" onclick="checkPassword('login')">Przejdź dalej!</button>
+    </div>
+
+    <script src="js/start-animation.js"></script>
+    <script src="js/validation.js"></script>
+    <script>
+        window.onload = function () {
+            checkProgress();
+        };
+    </script>
+
+</body>
+
+</html>

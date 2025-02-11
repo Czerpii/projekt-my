@@ -1,0 +1,108 @@
+body {
+    background: linear-gradient(to bottom, #0D0221, #6A0DAD);
+}
+
+.main-container {
+    text-align: center;
+    font-size: 6rem;
+    white-space: nowrap;
+    overflow: hidden;
+    width: fit-content;
+    animation: fadeIn 4s ease-in-out forwards;
+
+}
+
+.button-container {
+    opacity: 0;
+    margin-top: 20px;
+    animation: slideUp 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+.start-button,
+.submit-button {
+    font-size: 2rem;
+    padding: 10px 20px;
+    background-color: #FF007F;
+    box-shadow: 0 0 10px #FF1493;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.submit-button {
+    margin-top: 20px;
+}
+
+.submit-button:hover,
+.start-button:hover {
+    background: linear-gradient(45deg, #00FFFF, #0099FF);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+}
+
+
+.form-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #1A033D, #7A1BC7);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #FF1493;
+    border: 1px #FF1493 solid;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.question-box {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    max-width: 450px;
+    word-wrap: break-word;
+}
+
+.question-box p.intro {
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.question-box p.question {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.input-field {
+    font-size: 1.8rem;
+    padding: 12px;
+    margin: 15px;
+    width: 300px;
+    border: 2px #FF1493 solid;
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.input-field:focus {
+    box-shadow: 0 0 15px #FF1493;
+    border-color: #FF1493;
+    outline: none;
+}
+
+.error-message {
+    display: none;
+    font-size: 1.8rem;
+    color: #FF1493;
+    margin-top: 10px;
+}
+
+
+/* animacje */

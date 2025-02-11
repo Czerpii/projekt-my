@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/chapter-style.css">
+
+    <title>Rozdział 1</title>
+</head>
+
+<body>
+    <div id="slide1" class="chapter-container">
+
+        <div class="title-container">
+            <h1 class="title-chapter">Dzień który zmienił wszystko...</h1>
+            <p class="desc-chapter">Czasem wystarczy jeden moment, jedno słowo, jedna decyzja, by świat już nigdy nie
+                był taki sam</p>
+            <p class="desc-chapter">Dla Ciebie to było tylko jedno przesunięcie palcem. <br> Dla nas – początek
+                historii,
+                której nikt się nie spodziewał.
+                <br>Gdybyś mogła cofnąć czas, zrobiłabyś to jeszcze raz?
+            </p>
+            <div class="button-container">
+                <button class="next-btn yes" data-target="slide2">Tak</button>
+                <button class="next-btn no" data-target="slide2"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="chapter-container" id="slide2">
+        <div class="swipe-card">
+            <img src="assets/img/profile.jpg" alt="Zdjęcie profilowe" class="profile-image">
+            <div class="profile-info">
+                <h2 class="profile-name">Mateusz, 26</h2>
+                <p class="profile-bio">🎬 Netflix and chill? 😏</p>
+            </div>
+            <div class="swipe-actions">
+                <button class="dislike-btn">❌</button>
+                <button class="like-btn" data-target="slide3">❤️</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="chapter-container" id="slide3">
+        <h1 class="title-slide3">Tak zaczęła się historia...</h1>
+        <p class="desc-slide3">Nie było fanfar, nie było dramatycznych scen.</p>
+        <p class="desc-slide3">Było tylko jedno powiadomienie i mały błysk ciekawości.</p>
+        <p class="desc-slide3">Kilka zdań, kilka uśmiechów na ekranie.</p>
+        <p class="desc-slide3">A potem… coś, czego żadne z nas się nie spodziewało.</p>
+
+        <button class="next-slide" data-target="slide4">Dalej</button>
+    </div>
+
+    <div class="chapter-container" id="slide4">
+        <h1 class="title-slide4">Kilka najważniejszych dat</h1>
+
+        <div class="timeline">
+            <div class="timeline-item" data-image="assets/img/messenger.jpg"
+                data-text="Nasza pierwsza rozmowa. Od tego wszystko się zaczęło.">
+                <span class="date">03.12.2020</span>
+                <p class="event">Pierwsza wiadomość na Messengerze</p>
+            </div>
+
+            <div class="timeline-item" data-image="assets/img/first_meeting.jpg"
+                data-text="Pierwsze spotkanie – chwila pełna emocji i oczekiwania.">
+                <span class="date">20.12.2020</span>
+                <p class="event">Nasze pierwsze spotkanie</p>
+            </div>
+
+            <div class="timeline-item" data-image=""
+                data-text="Pierwsze 'Kocham Cię'. Moment, który na zawsze zostanie w pamięci.">
+                <span class="date">23.01.2021</span>
+                <p class="event">Pierwsze „Kocham Cię”</p>
+            </div>
+
+            <div class="timeline-item" data-image=""
+                data-text="Nasz pierwszy raz – bliskość, która połączyła nas jeszcze bardziej.">
+                <span class="date">23.01.2021</span>
+                <p class="event">Nasz pierwszy raz</p>
+            </div>
+        </div>
+
+        <button class="next-slide" data-target="slide5">Dalej</button>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <img id="popup-image" src="" alt="Zdjęcie wydarzenia">
+            <p id="popup-text"></p>
+        </div>
+    </div>
+
+    <div class="chapter-container" id="slide5">
+        <h1 class="title-slide5">Pamiętasz to miejsce, gdzie byliśmy na naszym pierwszym szlifie? <br> Jaka to była
+            miejscowość? </h1>
+        <input type="text" id="answer" class="input-field" placeholder=>
+        <p class="error-message">Niepoprawna odpowiedź. Spróbuj ponownie.</p>
+        <button class="submit-button" onclick="checkPassword('chapter1_end')">Przejdź dalej!</button>
+    </div>
+
+    <script src="js/validation.js"></script>
+    <script src="js/chapter-animations.js"></script>
+    <script>
+        window.onload = function () {
+            checkProgress();
+        };
+
+    </script>
+</body>
+
+</html>
