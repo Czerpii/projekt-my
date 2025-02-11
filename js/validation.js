@@ -51,8 +51,10 @@ function skipToNextChapter(questionsKey) {
 
 function checkProgress() {
     const lastUnlockedChapter = localStorage.getItem("unlockedChapter");
-    if (lastUnlockedChapter && (window.location.pathname === "/" || window.location.pathname.endsWith("index.html"))) {
+    const currentPath = window.location.pathname.split('/').pop(); // Pobiera ostatni fragment URL-a
+    if (lastUnlockedChapter && (currentPath === "" || currentPath === "index.html")) {
         window.location.href = lastUnlockedChapter;
     }
 }
+
 
