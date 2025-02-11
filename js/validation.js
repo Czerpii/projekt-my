@@ -51,6 +51,7 @@ function skipToNextChapter(questionsKey) {
 
 function checkProgress() {
     const lastUnlockedChapter = localStorage.getItem("unlockedChapter");
+    console.log("Ostatni zapisany rozdział:", lastUnlockedChapter);
     const currentPath = window.location.pathname.split('/').pop(); // Pobiera ostatni fragment URL-a
     if (lastUnlockedChapter && (currentPath === "" || currentPath === "index.html")) {
         window.location.href = lastUnlockedChapter;
