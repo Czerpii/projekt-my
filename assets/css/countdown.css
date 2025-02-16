@@ -10,6 +10,7 @@ body {
     align-items: center;
     height: 100vh;
     width: 100%;
+
 }
 
 #countdown {
@@ -19,6 +20,7 @@ body {
     align-items: center;
     gap: 40px;
     text-align: center;
+    z-index: 10;
 }
 
 .time-box {
@@ -73,9 +75,82 @@ body {
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: scale(0.8);
     }
 
     to {
         opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Styl dla ukrytych gwiazdek */
+/* Wrapper dla kropki i notatki */
+.note-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    max-width: 100vw;
+}
+
+/* Kropka */
+.note-dot {
+    width: 15px;
+    height: 15px;
+    background-color: #ffaf7b;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 175, 123, 0.8);
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Kropki statyczne */
+.static-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+}
+
+/* Notatka */
+.note-card {
+    background: rgba(255, 245, 225, 0.95);
+    color: #3a1c71;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: scale(0.8);
+    z-index: 10;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Animacja wyświetlania */
+.note-container:hover .note-card {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.note-container:hover .note-dot {
+    opacity: 0;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .note-card {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .note-dot {
+        width: 12px;
+        height: 12px;
     }
 }
