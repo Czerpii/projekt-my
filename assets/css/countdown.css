@@ -1,6 +1,7 @@
 body {
     background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
     color: #fff5e1;
+
 }
 
 .container {
@@ -142,15 +143,138 @@ body {
     opacity: 0;
 }
 
-/* Responsywność */
+
+/* 📲 TABLETY poziome (np. iPad Pro) */
+@media (max-width: 1200px) {
+    .time-box {
+        width: 130px;
+        padding: 15px 25px;
+    }
+
+    .time-box span {
+        font-size: 4rem;
+    }
+
+    .time-box p {
+        font-size: 1.6rem;
+    }
+
+    #message {
+        font-size: 4rem;
+    }
+
+    .note-container {
+        display: none;
+    }
+
+    .static-dot {
+        display: none;
+    }
+}
+
+/* 📲 TABLETY pionowe (np. iPad Mini, Galaxy Tab) */
+@media (max-width: 992px) {
+    .container {
+        height: auto;
+        padding: 20px;
+    }
+
+    #countdown {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .time-box {
+        width: 120px;
+        padding: 15px 20px;
+    }
+
+    .time-box span {
+        font-size: 3.5rem;
+    }
+
+    .time-box p {
+        font-size: 1.4rem;
+    }
+
+    #message {
+        font-size: 3.5rem;
+    }
+}
+
+/* 📱 SMARTFONY większe (iPhone 13/14/15/16, Galaxy S, Pixel) */
 @media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        height: auto;
+    }
+
+    #countdown {
+        /* flex-direction: column; */
+        gap: 15px;
+    }
+
+    .time-box {
+        width: 100px;
+        padding: 12px 15px;
+    }
+
+    .time-box span {
+        font-size: 3rem;
+    }
+
+    .time-box p {
+        font-size: 1.2rem;
+    }
+
+    #message {
+        font-size: 3rem;
+    }
+
     .note-card {
         font-size: 1rem;
         padding: 8px;
+        max-width: 180px;
     }
 
     .note-dot {
-        width: 12px;
-        height: 12px;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* 📱 SMARTFONY mniejsze (stare iPhone SE, Galaxy A) */
+@media (max-width: 480px) {
+    #countdown {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .time-box {
+        width: 90px;
+        padding: 10px 12px;
+    }
+
+    .time-box span {
+        font-size: 2.5rem;
+    }
+
+    .time-box p {
+        font-size: 1rem;
+    }
+
+    #message {
+        font-size: 2.5rem;
+    }
+
+
+    .note-card {
+        font-size: 0.9rem;
+        max-width: 160px;
+    }
+
+    .note-dot {
+        width: 8px;
+        height: 8px;
     }
 }
