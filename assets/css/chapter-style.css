@@ -10,7 +10,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 50%;
 }
 
@@ -356,4 +355,83 @@ body {
     background-color: #34495E;
     /* 
     box-shadow: 0 0 25px rgba(0, 255, 255, 0.8); */
+}
+
+@media (max-width: 480px) {
+    .chapter-container {
+        width: 90%;
+    }
+
+    .swipe-card {
+        width: 90%;
+        height: 500px;
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 90%;
+        height: 65%;
+        margin-bottom: 10px;
+    }
+
+    .profile-info {
+        padding: 10px;
+    }
+
+    .profile-name {
+        font-size: 2.5rem;
+    }
+
+    .profile-bio {
+        font-size: 1.5rem;
+    }
+
+    .like-btn,
+    .dislike-btn {
+        font-size: 2rem;
+    }
+
+    .title-slide3 {
+        font-size: 2rem;
+    }
+
+    .desc-slide3 {
+        font-size: 1.5rem;
+    }
+
+    .next-slide {
+        font-size: 1.5rem;
+    }
+
+    .title-slide4 {
+        font-size: 2rem;
+    }
+
+    .date {
+        font-size: 1.5rem;
+    }
+
+    .event {
+        font-size: 1.2rem;
+    }
+
+    .popup-content {
+        width: 300px;
+    }
+
+    .input-field {
+        width: 250px;
+    }
+
+    .input-field:focus {
+        box-shadow: 0 0 10px #34495E;
+    }
+
+    .error-message {
+        font-size: 1.5rem;
+    }
+
+    .submit-button {
+        font-size: 1.5rem;
+    }
 }
