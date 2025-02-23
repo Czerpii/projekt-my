@@ -277,4 +277,8 @@ body {
         width: 8px;
         height: 8px;
     }
+
+    #message {
+        font-size: 2rem;
+    }
 }
